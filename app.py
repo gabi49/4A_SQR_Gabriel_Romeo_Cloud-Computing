@@ -36,7 +36,7 @@ def calculate():
     #    "id": calculation_id,
     #    "result": result
     #}
-    return calculation_id, 200
+    return calculations, 200
 
 @app.route("/resultat", methods=["GET"])
 def get_result(calculation_id):
