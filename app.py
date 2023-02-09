@@ -1,14 +1,32 @@
-from flask import Flask
+from flask import Flask, request, jsonify
 import sys
 
 
 app = Flask(__name__)
+results = {}
 
 @app.route('/')
 def exemple():
     return "bonjour"
 
 
+@app.route("/addition", methods=["POST"])
+def addition():
+    data = request.get_json()
+    a = data["a"]
+    b = data["b"]
+    result = a + b
+    id = len(results)
+    results[id] = result
+    return jsonify({"id": id})
+
+
+@app.route("/resultat", methods=["GET"])
+def resultat(id):
+    result = results.get(id)
+    if result is None:
+        return jsonify({"error": "Invalid id"}), 404
+    return jsonify({"result": result})
 
 
 
