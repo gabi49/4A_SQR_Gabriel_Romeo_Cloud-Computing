@@ -38,7 +38,7 @@ def calculate():
     #}
     return calculations, 200
 
-@app.route("/resultat", methods=["GET"])
+@app.route("/resultat/<int:calculation_id>", methods=["GET"])
 def get_result(calculation_id):
     result = calculations.get(calculation_id)
     if result is None:
