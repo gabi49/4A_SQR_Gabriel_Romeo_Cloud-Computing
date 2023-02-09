@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import sys
 
 
@@ -9,7 +9,7 @@ calculations = {}
 
 @app.route('/')
 def exemple():
-    return "bonjour"
+    return jsonify(calculations)
 
 @app.route("/calculate", methods=["POST"])
 def calculate():
@@ -29,14 +29,14 @@ def calculate():
     else:
         return "Invalid Operation", 400
 
-    calculation_id = len(calculations) + 1
+    calculation_id = len(calculations)
     calculations[calculation_id] = result
 
-    response = {
-        "id": calculation_id,
-        "result": result
-    }
-    return response, 200
+    #response = {
+    #    "id": calculation_id,
+    #    "result": result
+    #}
+    return calculation_id, 200
 
 @app.route("/resultat", methods=["GET"])
 def get_result(calculation_id):
