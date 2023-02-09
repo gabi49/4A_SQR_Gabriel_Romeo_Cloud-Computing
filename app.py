@@ -1,37 +1,49 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 import sys
 
 
 app = Flask(__name__)
-results = {}
+calculations = {}
+#results = {}
 # idOpt = 0
 
 @app.route('/')
 def exemple():
     return "bonjour"
 
-
-@app.route("/addition", methods=["POST"])
-def addition():
-   
+@app.route("/calculate", methods=["POST"])
+def calculate():
     data = request.get_json()
-    a = data["a"]
-    b = data["b"]
-    result = a + b
-    id = len(results)
-    results[id] = result
-    return jsonify({"id": id})
+    operation = data.get("operation")
+    first_operand = data.get("first_operand")
+    second_operand = data.get("second_operand")
 
+    if operation == "addition":
+        result = first_operand + second_operand
+    elif operation == "subtraction":
+        result = first_operand - second_operand
+    elif operation == "multiplication":
+        result = first_operand * second_operand
+    elif operation == "division":
+        result = first_operand / second_operand
+    else:
+        return "Invalid Operation", 400
+
+    calculation_id = len(calculations) + 1
+    calculations[calculation_id] = result
+
+    response = {
+        "id": calculation_id,
+        "result": result
+    }
+    return response, 200
 
 @app.route("/resultat", methods=["GET"])
-def resultat(id):
-    result = results.get(id)
+def get_result(calculation_id):
+    result = calculations.get(calculation_id)
     if result is None:
-        return jsonify({"error": "Invalid id"}), 404
-    return jsonify({"result": result})
-
-
-
+        return "Calculation not found", 404
+    return {"result": result}, 200
 
 
 if __name__ == '__main__':
