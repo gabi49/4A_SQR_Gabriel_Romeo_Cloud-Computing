@@ -4,7 +4,7 @@ import sys
 
 app = Flask(__name__)
 results = {}
-id = 0;
+# idOpt = 0
 
 @app.route('/')
 def exemple():
@@ -13,13 +13,13 @@ def exemple():
 
 @app.route("/addition", methods=["POST"])
 def addition():
+   
     data = request.get_json()
     a = data["a"]
     b = data["b"]
     result = a + b
-    # id = len(results)
+    id = len(results)
     results[id] = result
-    id += 1
     return jsonify({"id": id})
 
 
