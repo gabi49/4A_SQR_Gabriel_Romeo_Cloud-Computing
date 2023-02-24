@@ -7,7 +7,7 @@ function additionner() {
         alert("Veuillez remplir tous les champs !");
         return false;
     }
-    fetch('http://gabi49-solid-parakeet-jwxq769r5v4h97r.github.dev/pf-signin?visibility=private&port=5000&cid=5ed888b8bbd70774f01897d52450ecb6/addition', {
+    fetch('http://localhost:5000/addition', {
         method: 'POST',
         body: JSON.stringify({nombre1: nombre1, nombre2: nombre2}),
         headers: {
