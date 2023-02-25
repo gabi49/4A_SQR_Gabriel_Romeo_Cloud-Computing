@@ -7,7 +7,7 @@ function additionner() {
         alert("Veuillez remplir tous les champs !");
         return false;
     }
-    fetch('https://gabi49-solid-parakeet-jwxq769r5v4h97r-5000.preview.app.github.dev/', {
+    fetch('http://localhost:5000/addition', {
         method: 'POST',
         body: JSON.stringify({nombre1: nombre1, nombre2: nombre2}),
         headers: {
