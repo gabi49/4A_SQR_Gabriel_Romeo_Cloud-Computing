@@ -18,5 +18,7 @@ function additionner() {
     .then(data => {
         document.getElementById("resultat").value = data.resultat;
     })
-    .catch(error => console.error(error));
+    .catch(error => {
+        // Gérez les erreurs ici
+      });
 }
