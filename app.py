@@ -5,6 +5,7 @@ import redis
 
 
 app = Flask(__name__)
+CORS(app)
 calculations = {}
 r = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
 
