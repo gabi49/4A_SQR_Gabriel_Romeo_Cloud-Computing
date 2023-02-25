@@ -7,7 +7,7 @@ function additionner() {
         alert("Veuillez remplir tous les champs !");
         return false;
     }
-    fetch('http://google.fr', {
+    fetch('https://www.google.fr/', {
         method: 'POST',
         body: JSON.stringify({nombre1: nombre1, nombre2: nombre2}),
         headers: {
