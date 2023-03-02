@@ -8,6 +8,10 @@ tweets = []
 tweets_db = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
 users_db = redis.Redis(host='localhost', port=6379, db=1, decode_responses=True)
 
+@app.route('/')
+def mytransaction():
+	return "hello"
+
 @app.route('/tweets', methods=['GET'])
 def get_tweets():
     return jsonify(tweets)
