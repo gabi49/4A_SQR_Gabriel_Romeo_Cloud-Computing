@@ -25,7 +25,7 @@ def create_tweet():
 		'tweet' : tweet['tweet']
 	}
     tweets.append(newtweet)
-    return jsonify({'message': 'Le tweet a été enregistré avec succès'})
+    return "tweet reussi!!!"
 
 
 
