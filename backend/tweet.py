@@ -10,7 +10,7 @@ users_db = redis.Redis(host='localhost', port=6379, db=1, decode_responses=True)
 
 @app.route('/tweets', methods=['GET'])
 def get_tweets():
-    return jsonify({'tweets': tweets})
+    return jsonify(tweets)
 
 
 @app.route('/Addtweets', methods=['POST'])
