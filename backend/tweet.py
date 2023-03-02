@@ -20,7 +20,11 @@ def get_tweets():
 @app.route('/Addtweets', methods=['POST'])
 def create_tweet():
     tweet = request.json
-    tweets.append(tweet)
+    newtweet = {
+		'author' : tweet['username'],
+		'message' : tweet['tweet']
+	}
+    tweets.append(newtweet)
     return jsonify({'message': 'Le tweet a été enregistré avec succès'})
 
 
