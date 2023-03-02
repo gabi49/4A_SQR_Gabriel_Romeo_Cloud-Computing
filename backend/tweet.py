@@ -4,16 +4,16 @@ import redis
 
 
 app = Flask(__name__)
-tweets = {}
+tweets = []
 tweets_db = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
 users_db = redis.Redis(host='localhost', port=6379, db=1, decode_responses=True)
 
 @app.route('/tweets', methods=['GET'])
 def get_tweets():
     return jsonify({'tweets': tweets})
-    
 
-@app.route('/tweets', methods=['POST'])
+
+@app.route('/Addtweets', methods=['POST'])
 def create_tweet():
     tweet = request.json
     tweets.append(tweet)
