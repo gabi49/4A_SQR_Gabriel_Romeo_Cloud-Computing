@@ -22,7 +22,7 @@ def create_tweet():
     tweet = request.json
     newtweet = {
 		'author' : tweet['username'],
-		'message' : tweet['tweet']
+		'tweet' : tweet['tweet']
 	}
     tweets.append(newtweet)
     return jsonify({'message': 'Le tweet a été enregistré avec succès'})
