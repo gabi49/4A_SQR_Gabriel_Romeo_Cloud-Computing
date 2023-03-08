@@ -42,6 +42,10 @@ def get_user_tweets(username):
 
     # Récupère tous les tweets d'un utilisateur
     user_tweet_keys = users_db.get(username)
+    if not user_tweet_keys:
+        return jsonify([])
+    user_tweet_keys = [key.decode('utf-8') for key in user_tweet_keys]
+    
     user_tweets = []
     for key in user_tweet_keys:
         tweet = json.loads(tweets_db.get(key))
