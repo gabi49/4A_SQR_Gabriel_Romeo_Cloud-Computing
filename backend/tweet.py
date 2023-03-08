@@ -30,10 +30,10 @@ def create_tweet():
             'author': username,
             'tweet': message
         }
-    #tweet_key = f'tweet:{timestamp}'
-    tweets_db.set(timestamp, json.dumps(tweet))
-    #users_key = f'user:{username}'
-    users_db.lpush(username, timestamp)
+    tweet_key = f'tweet:{timestamp}'
+    tweets_db.set(tweet_key, json.dumps(tweet))
+    users_key = f'user:{username}'
+    users_db.lpush(users_key, timestamp)
     return "magnifique"
 
 ## Recuperer les tweets d'un etuilisateur grace à son pseudo
