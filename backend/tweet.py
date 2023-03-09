@@ -39,10 +39,12 @@ def create_tweet():
 ## Recuperer les tweets d'un utilisateur grace à son pseudo
 @app.route('/tweets/<username>', methods=['GET'])
 def get_user_tweets(username):
-
-    # Récupère tous les tweets d'un utilisateur
     user_Key = f'user:{username}'
-    user_tweet_keys = users_db.get(user_Key)
+    # Récupère tous les tweets d'un utilisateur
+    for key in tweets_db.scan_iter("user:*"):
+        if (user_Key == key):
+            user_tweet_keys = users_db.get(key)
+        return user_tweet_keys
     
     #print(user_tweet_keys)
 
