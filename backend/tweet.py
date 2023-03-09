@@ -37,7 +37,7 @@ def create_tweet():
     return "magnifique"
 
 ## Recuperer les tweets d'un utilisateur grace à son pseudo
-@app.route('/tweets/<username>', methods=['GET'])
+#@app.route('/tweets/<username>', methods=['GET'])
 #def get_user_tweets(username):
 
     # Récupère tous les tweets d'un utilisateur
