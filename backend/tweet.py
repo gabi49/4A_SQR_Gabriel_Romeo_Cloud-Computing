@@ -41,9 +41,9 @@ def create_tweet():
 def get_user_tweets(username):
 
     # Récupère tous les tweets d'un utilisateur
-    user_tweet_keys = users_db.get(f'user:{username}')
+    #user_tweet_keys = users_db.get(f'user:{username}')
     
-    print(user_tweet_keys)
+    #print(user_tweet_keys)
 
     #if not user_tweet_keys:
     #    return jsonify([])
