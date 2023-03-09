@@ -36,21 +36,24 @@ def create_tweet():
     users_db.lpush(users_key, timestamp)
     return "magnifique"
 
-## Recuperer les tweets d'un etuilisateur grace à son pseudo
+## Recuperer les tweets d'un utilisateur grace à son pseudo
 @app.route('/tweets/<username>', methods=['GET'])
 def get_user_tweets(username):
 
     # Récupère tous les tweets d'un utilisateur
-    user_tweet_keys = users_db.get(username)
-    if not user_tweet_keys:
-        return jsonify([])
-    user_tweet_keys = [key.decode('utf-8') for key in user_tweet_keys]
+    user_tweet_keys = users_db.get(f'user:{username}')
     
-    user_tweets = []
-    for key in user_tweet_keys:
-        tweet = json.loads(tweets_db.get(key))
-        user_tweets.append(tweet)
-    return jsonify(user_tweets)
+    print(user_tweet_keys)
+
+    #if not user_tweet_keys:
+    #    return jsonify([])
+    #user_tweet_keys = [key.decode('utf-8') for key in user_tweet_keys]
+
+    # user_tweets = []
+    # for key in user_tweet_keys:
+    #    tweet = json.loads(tweets_db.get(key))
+    #    user_tweets.append(tweet)
+    # return jsonify(user_tweets)
 
 
 
