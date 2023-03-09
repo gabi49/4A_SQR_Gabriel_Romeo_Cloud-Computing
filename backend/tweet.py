@@ -41,7 +41,7 @@ def create_tweet():
 def get_user_tweets(username):
     user_Key = f'user:{username}'
     # Récupère tous les tweets d'un utilisateur
-    for key in tweets_db.scan_iter("user:*"):
+    for key in users_db.scan_iter("user:*"):
         if (user_Key == key):
             user_tweet_keys = users_db.get(key)
         return user_tweet_keys
