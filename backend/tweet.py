@@ -45,7 +45,7 @@ def get_user_tweets(username):
         if (user_Key == key):
             user_tweet_keys = users_db.get(key)
         return user_tweet_keys
-    return 0
+    return "0"
     #print(user_tweet_keys)
 
     #if not user_tweet_keys:
