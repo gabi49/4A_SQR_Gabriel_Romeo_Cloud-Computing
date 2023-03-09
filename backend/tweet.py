@@ -56,7 +56,7 @@ def get_user_tweets(username):
     # for key in user_tweet_keys:
     #    tweet = json.loads(tweets_db.get(key))
     #    user_tweets.append(tweet)
-    return jsonify(user_tweet_keys)
+    #return jsonify(user_tweet_keys)
 
 
 
