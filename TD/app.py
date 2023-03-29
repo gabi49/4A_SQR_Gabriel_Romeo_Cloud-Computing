@@ -54,8 +54,8 @@ def get_result(calculation_id):
 def addition():
         # Récupérer les données de la requête
     data = request.get_json()
-    a = float(data['a'])
-    b = float(data['b'])
+    a = float(data['num1'])
+    b = float(data['num2'])
         # Effectuer l'addition
     result = a + b
         # Stocker le résultat dans Redis
