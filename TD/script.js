@@ -1,13 +1,48 @@
 const form = document.querySelector('#calculator-form');
+const addButton = document.getElementById('additionBtn');
+const substractButton = document.getElementById('Soustraire');
 
-function additionner() {
-    var nombre1 = parseInt(document.getElementById("number1").value);
-    var nombre2 = parseInt(document.getElementById("number2").value);
+addButton.addEventListener('click', function() {
+
+    const nombre1 = parseInt(document.getElementById("number1").value);
+    const nombre2 = parseInt(document.getElementById("number2").value);
+
+    console.log("preif");
     if (isNaN(nombre1) || isNaN(nombre2)) {
         alert("Veuillez remplir tous les champs !");
         return false;
     }
-    fetch('http://localhost:5000/addition', {
+    console.log(nombre1);
+    fetch("http://locahost:5000/", {
+        method: "POST",
+        mode: "cors",
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("infetch")
+        console.log(data);
+        const result = document.getElementById('result');
+        result.innerHTML = data.result;
+       
+    })
+    .catch(e => console.log(e));
+    console.log("postFetch");
+});
+
+
+substractButton.addEventListener('click', function() {
+    const nombre1 = parseInt(document.getElementById("number1").value);
+    const nombre2 = parseInt(document.getElementById("number2").value);
+
+    if (isNaN(nombre1) || isNaN(nombre2)) {
+        alert("Veuillez remplir tous les champs !");
+        return false;
+    }
+
+    fetch('http://localhost:5000/soustraction', {
         method: 'POST',
         body: JSON.stringify({nombre1: nombre1, nombre2: nombre2}),
         headers: {
@@ -16,9 +51,10 @@ function additionner() {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById("resultat").value = data.resultat;
+        const result = document.getElementById('result');
+        result.innerHTML = data.result;
     })
     .catch(error => {
         // Gérez les erreurs ici
-      });
-}
+    });
+});
