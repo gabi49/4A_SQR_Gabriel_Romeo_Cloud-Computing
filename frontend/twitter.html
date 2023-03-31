@@ -1,46 +1,47 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <title>Twitter API </title>
-    <link rel="stylesheet" href="twitter.css">
-  </head>
-  <body>
-    <header>
-      <h1>Twitter</h1>
-      <form>
-        <input type="text" placeholder="Rechercher...">
-        <button>Rechercher</button>
-      </form>
-    </header>
-    <script src="twitter.js"></script>
-    <main>
-      <h2>Tweets</h2>
-      <ul>
-        <li>
-          <img src="https://via.placeholder.com/50x50" alt="Avatar">
-          <div>
-            <h3>Nom d'utilisateur</h3>
-            <p>Contenu du tweet...</p>
-            <div>
-              <button>Retweeter</button>
-              <span>Date</span>
-            </div>
-          </div>
-        </li>
-        <li>
-          <img src="https://via.placeholder.com/50x50" alt="Avatar">
-          <div>
-            <h3>Nom d'utilisateur</h3>
-            <p>Contenu du tweet...</p>
-            <div>
-              <button>Retweeter</button>
-              <span>Date</span>
-            </div>
-          </div>
-        </li>
-        <!-- Ajoutez autant d'éléments <li> que nécessaire pour afficher tous les tweets -->
-      </ul>
-    </main>
-  </body>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Page avec utilisateurs</title>
+	<link rel="stylesheet" type="text/css" href="twitter.css">
+</head>
+<body>
+	<header>
+		<h1>twitter API</h1>
+	</header>
+	<main>
+		<section>
+			<h2>Black Shadow</h2>
+      <img src="C:\ESIREM\Cloud Computing\gabriel.jpg" alt="Photo de profil">
+			<form id="user1-form">
+				<label for="user1-tweet">Tweeter:</label>
+				<input type="text" id="user1-tweet" name="user1-tweet">
+        
+				<button type="submit">Tweeter</button>
+        <button type="submit">Retweeter</button>
+			</form>
+			<div id="user1-tweets"></div>
+		</section>
+		<section>
+			<h2>Simplifyer</h2>
+      <img src="C:\ESIREM\Cloud Computing\romeo.jpg" alt="Photo de profil">
+			<form id="user2-form">
+				<label for="user2-tweet">Tweeter:</label>
+				<input type="text" id="user2-tweet" name="user2-tweet">
+				<button type="submit">Tweeter</button>
+        <button type="submit">Retweeter</button>
+			</form>
+			<div id="user2-tweets"></div>
+		</section>
+		<section>
+			<h2>Sujets</h2>
+			<ul id="topics">
+				<li>Technologie</li>
+				<li>Musique</li>
+				<li>Sport</li>
+			</ul>
+		</section>
+	</main>
+	<script src="twitter.js"></script>
+</body>
 </html>
