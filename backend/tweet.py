@@ -26,16 +26,16 @@ def mytweetList():
 def create_tweet():
     username = request.json.get('username')
     message = request.json.get('tweet')
-    topic = request.json.get('#')
+    #topic = request.json.get('#')
     timestamp = str(time.time())
     tweet = {
             'author': username,
-            'tweet': message,
-            'sujet': topic
+            'tweet': message
+            #'sujet': topic
         }
     tweets_db.set(timestamp, json.dumps(tweet))
     users_db.lpush(username, timestamp)
-    topics_db.lpush(topic, timestamp)
+    #topics_db.lpush(topic, timestamp)
     return "magnifique"
 
 ## Recuperer les tweets d'un utilisateur grace à son pseudo
