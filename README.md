@@ -1,4 +1,5 @@
 # 4A_SQR_Gabriel&Romeo_Cloud-Computing
+[![uB](img/UB.png)](https://u-bourgogne.fr/) | ESIREM - 4A - ILC/SQR <br/> Cloud computing <br/><br/> **[ EXAMEN PRATIQUE ]** | [![ESIREM](img/ESIREM.png)](https://esirem.u-bourgogne.fr/)
 
 Auteurs :
 Kameni Gabriel,
