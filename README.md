@@ -41,6 +41,7 @@ Accéder aux différentes routes du backend à partir de l'URL du backend.
 
 *La route GET /tweets/<topic> permet de récupérer tous les tweets liés à un sujet.
 
+
 # Conclusion
 Le frontend et le backend sont deux éléments essentiels pour le développement d'une application web. Le frontend est la partie visible de l'application, ce qui permet à l'utilisateur d'interagir avec l'interface graphique. Il est important d'avoir un frontend bien structuré pour offrir une expérience utilisateur agréable.
 Le backend, quant à lui, est la partie invisible de l'application qui gère la logique et les fonctionnalités du site web. Il est responsable du stockage, de la gestion et de la manipulation des données, ainsi que de la communication entre le serveur et le client. Il est essentiel que le backend soit fiable, sécurisé et efficace pour assurer un fonctionnement optimal de l'application.
