@@ -19,9 +19,13 @@ twitter.js : le code JavaScript pour effectuer les différentes actions de l'app
 ## Fonctionnalités du code JavaScript :
 
 -sendTweet(username, message, topic) : envoie un nouveau tweet en utilisant une requête POST à l'API du serveur backend;
+
 -getUserTweets(username) : récupère les tweets d'un utilisateur donné en utilisant une requête GET à l'API du serveur backend;
+
 -retweet(tweet_id, username) : retweete un tweet existant en utilisant une requête POST à l'API du serveur backend;
+
 -getTopics() : récupère la liste des sujets populaires en utilisant une requête GET à l'API du serveur backend;
+
 -getTopicTweets(topic) : récupère les tweets liés à un sujet donné en utilisant une requête GET à l'API du serveur backend;
 
 Ces différentes pages HTML de l'application utilisent le code JavaScript pour effectuer les actions correspondantes. La page d'accueil twitter.html affiche le logo de Twitter et des boutons pour accéder aux différentes fonctionnalités de l'application.
