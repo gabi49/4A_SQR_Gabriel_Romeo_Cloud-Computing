@@ -7,14 +7,14 @@ Ce projet est une application web similaire à Twitter, permettant aux utilisate
 
 ## Le projet est composé des fichiers suivants :
 
-twitter.html : la page d'accueil de l'application
-page1.html : la page pour envoyer un nouveau tweet
-page2.html : la page pour retweeter un tweet existant
-page3.html : la page pour afficher les tweets d'un utilisateur
-page4.html : la page pour afficher les tweets liés à un sujet
-page5.html : la page pour afficher les sujets populaires
-twitter.css : la feuille de style CSS pour l'application
-twitter.js : le code JavaScript pour effectuer les différentes actions de l'application
+# twitter.html :  la page d'accueil de l'application
+# page1.html : la page pour envoyer un nouveau tweet;
+# page2.html : la page pour retweeter un tweet existant;
+# page3.html : la page pour afficher les tweets d'un utilisateur;
+# page4.html : la page pour afficher les tweets liés à un sujet;
+# page5.html : la page pour afficher les sujets populaires
+# twitter.css : la feuille de style CSS pour l'application
+# twitter.js : le code JavaScript pour effectuer les différentes actions de l'application
 
 ## Fonctionnalités du code JavaScript :
 
