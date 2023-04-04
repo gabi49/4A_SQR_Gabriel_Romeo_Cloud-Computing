@@ -47,5 +47,5 @@ Ce backend a été développé pour le projet Twitter Cloud Computing qui permet
 -URL: /tweets/<topic>
 -Méthode HTTP: GET
 -Retourne: tous les tweets associés au sujet au format JSON
-  
+   
   
