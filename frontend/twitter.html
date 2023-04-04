@@ -1,47 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Page avec utilisateurs</title>
+	<title>Twitter Projet - Page d'accueil</title>
 	<link rel="stylesheet" type="text/css" href="twitter.css">
+	<img src="C:\ESIREM\Cloud Computing\twitter.png" alt="Logo Twitter" id="logo">
+
 </head>
 <body>
-	<header>
-		<h1>twitter API</h1>
-	</header>
-	<main>
-		<section>
-			<h2>Black Shadow</h2>
-      <img src="C:\ESIREM\Cloud Computing\gabriel.jpg" alt="Photo de profil">
-			<form id="user1-form">
-				<label for="user1-tweet">Tweeter:</label>
-				<input type="text" id="user1-tweet" name="user1-tweet">
-        
-				<button type="submit">Tweeter</button>
-        <button type="submit">Retweeter</button>
-			</form>
-			<div id="user1-tweets"></div>
-		</section>
-		<section>
-			<h2>Simplifyer</h2>
-      <img src="C:\ESIREM\Cloud Computing\romeo.jpg" alt="Photo de profil">
-			<form id="user2-form">
-				<label for="user2-tweet">Tweeter:</label>
-				<input type="text" id="user2-tweet" name="user2-tweet">
-				<button type="submit">Tweeter</button>
-        <button type="submit">Retweeter</button>
-			</form>
-			<div id="user2-tweets"></div>
-		</section>
-		<section>
-			<h2>Sujets</h2>
-			<ul id="topics">
-				<li>Technologie</li>
-				<li>Musique</li>
-				<li>Sport</li>
-			</ul>
-		</section>
-	</main>
-	<script src="twitter.js"></script>
+	<h1>Twitter Projet</h1>
+
+	<button onclick="location.href='page1.html'">
+		<span class="icon tweet-icon"></span>
+		Tweeter
+	</button>
+	<button onclick="location.href='page2.html'">
+		<span class="icon retweet-icon"></span>
+		Retweeter
+	</button>
+	<button onclick="location.href='page3.html'">
+		<span class="icon user-icon"></span>
+		Tweets d'un utilisateur
+	</button>
+	<button onclick="location.href='page4.html'">
+		<span class="icon topic-icon"></span>
+		Tweets par sujet
+	</button>
+	<button onclick="location.href='page5.html'">
+		<span class="icon popular-icon"></span>
+		Sujets populaires
+	</button>
+    <script src="twitter.js"></script>
+
 </body>
 </html>
