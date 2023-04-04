@@ -1,6 +1,7 @@
 #  FRONTEND CLOUD COMPUTING
 
-Auteur:
+##### Auteurs:
+KAMENI GABRIEL
 KOULARAMBAYE ROMEO
 
 Ce projet est une application web similaire à Twitter, permettant aux utilisateurs de tweeter, retweeter, rechercher des tweets et des sujets, et afficher les tweets d'un utilisateur ou liés à un sujet.
