@@ -8,13 +8,13 @@ Ce projet est une application Web qui permet aux utilisateurs de publier des twe
 
 Le projet est divisé en deux parties :
 
-### 1-Frontend:Il s'agit de l'interface utilisateur de l'application qui est développée en utilisant html,css et js.
+##### 1-Frontend:Il s'agit de l'interface utilisateur de l'application qui est développée en utilisant html,css et js.
 
-### 2-Backend: Il s'agit de la partie serveur de l'application qui est développée en utilisant le framework Flask. Il utilise une base de données Redis pour stocker les tweets, les utilisateurs, les sujets et les retweets.
+##### 2-Backend: Il s'agit de la partie serveur de l'application qui est développée en utilisant le framework Flask. Il utilise une base de données Redis pour stocker les tweets, les utilisateurs, les sujets et les retweets.
 
 # Utilisation
 ## Frontend
--Ouvrir un navigateur Web et accéder à l'URL de l'application.
+Ouvrir un navigateur Web et accéder à l'URL de l'application.
 
 *S'inscrire ou se connecter en utilisant un compte existant.
 
