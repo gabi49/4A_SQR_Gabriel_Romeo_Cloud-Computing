@@ -38,12 +38,12 @@ Ce backend a été développé pour le projet Twitter Cloud Computing qui permet
 -Méthode HTTP: GET;
 -Retourne: tous les tweets de l'utilisateur au format JSON.
   
-#Récupérer tous les sujets enregistrés
+### Récupérer tous les sujets enregistrés
 -URL: /topics
 -Méthode HTTP: GET
 -Retourne: tous les sujets enregistrés au format JSON
 
-  # Afficher tous les tweets associés à un sujet
+ ### Afficher tous les tweets associés à un sujet
 -URL: /tweets/<topic>
 -Méthode HTTP: GET
 -Retourne: tous les tweets associés au sujet au format JSON
