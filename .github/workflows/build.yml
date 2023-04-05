@@ -19,6 +19,9 @@ jobs:
       - name: Install Flask
         run : |
           python -m pip install flask
+      - name: Install Redis module
+        run: pip install redis
+
 
       - name: Navigate to backend directory
         run: cd backend
