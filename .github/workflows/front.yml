@@ -1,0 +1,43 @@
+name: Deploy frontend
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Login to GCR
+      uses: docker/login-action@v1
+      with:
+        registry: eu.gcr.io
+        username: _json_key
+        password: ${{ secrets.GCLOUD_KEY }}
+    
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v0.2.1
+      with:
+        project_id: esirem
+        service_account_email: ${{ secrets.GCLOUD_EMAIL }}
+        service_account_key: ${{ secrets.GCLOUD_KEY }}
+      
+    - name: Build Docker image
+      uses: docker/build-push-action@v2
+      with:
+        context: ./frontend
+        dockerfile: Dockerfile
+        push: true
+        tags: eu.gcr.io/esirem/4a_sqr/frontend:${{ github.sha }}
+      
+    - name: Deploy application to GKE
+      uses: google-github-actions/deploy-cloudrun@v0.3.0
+      with:
+        service_name: frontend
+        region: europe-west1
+        image: eu.gcr.io/esirem/4a_sqr/frontend:${{ github.sha }}
+        platform: managed
+        project_id: esirem
