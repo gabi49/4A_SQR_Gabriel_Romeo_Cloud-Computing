@@ -1,9 +1,9 @@
 name: Build
 
 on:
-  push: 
+  push:
     branches: [ "main" ]
-  pull_request: 
+  pull_request:
     branches: [ "main" ]
 
 jobs:
@@ -14,13 +14,14 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
-         python_version: 3.8
- 
+          python-version: 3.8
+
       - name: Install Flask
         run : |
           python -m pip install flask
-      - name: run file python
-        run: python3 tweet.py check_syntax
-        
-      
 
+      - name: Navigate to backend directory
+        run: cd backend
+
+      - name: Run script
+        run: python3 /home/runner/work/4A_SQR_Gabriel_Romeo_Cloud-Computing/4A_SQR_Gabriel_Romeo_Cloud-Computing/backend/tweet.py check_syntax
