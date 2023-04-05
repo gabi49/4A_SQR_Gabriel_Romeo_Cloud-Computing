@@ -41,3 +41,4 @@ jobs:
         image: eu.gcr.io/esirem/4a_sqr/frontend:${{ github.sha }}
         platform: managed
         project_id: esirem
+        run: docker run -p 80:80 gabi49/twitter_frontend
