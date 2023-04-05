@@ -6,7 +6,7 @@ RUN pip install flask
 
 COPY . .
 
-ENV FLASK_APP=projet.py
+ENV FLASK_APP=tweet.py
 ENV FLASK_DEBUG=True
 
 EXPOSE 5000
