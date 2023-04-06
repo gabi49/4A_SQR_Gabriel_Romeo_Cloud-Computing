@@ -9,6 +9,7 @@ COPY . .
 ENV FLASK_APP=tweet.py
 ENV FLASK_DEBUG=True
 
+
 EXPOSE 5000
 
 CMD ["flask", "run"]
