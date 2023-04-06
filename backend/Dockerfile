@@ -3,6 +3,8 @@ FROM python:3.8
 RUN apt-get update
 RUN apt-get install python3-pip -y
 RUN pip install flask
+RUN  pip install flask_cors
+
 
 COPY . .
 
