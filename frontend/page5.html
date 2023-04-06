@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitter Projet - Sujets populaires</title>
+    <link rel="stylesheet" type="text/css" href=".\css\page5.css" />
+  </head>
+  <body>
+    <h1>Twitter - Sujets populaires</h1>
+
+    <div class="topics">
+      <div id="Question_layout">
+        <h2>Veuillez entrer le sujet</h2>
+		<input type="text" id="sujet" placeholder="Sujet"><br>
+        <button id="get-all-topics">Afficher</button>
+        <button onclick="location.href='twitter.html'">Retour</button>
+      </div>
+      <div id="tweetContainer">
+        <h2>Voici les tweets liés à ce sujet</h2>
+        <ul id="topics-list"></ul>
+      </div>
+    </div>
+
+    <script type="text/javascript" src=".\javascript\page5.js"></script>
+  </body>
+</html>
