@@ -25,4 +25,4 @@ jobs:
         python -m pip install -r requirements.txt
     - name: Run build script
       working-directory: ./backend
-      run: python tweet.py
+      run: python3 tweet.py check_syntax
