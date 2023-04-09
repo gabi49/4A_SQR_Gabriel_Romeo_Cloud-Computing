@@ -22,7 +22,6 @@ jobs:
       uses: google-github-actions/setup-gcloud@v0.2.1
       with:
         project_id: esirem
-        service_account_email: ${{ secrets.GCLOUD_EMAIL }}
         service_account_key: ${{ secrets.GCLOUD_KEY }}
       
     - name: Build Docker image
