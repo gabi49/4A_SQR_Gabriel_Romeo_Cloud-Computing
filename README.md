@@ -26,6 +26,9 @@ Ouvrir un navigateur Web et accéder à l'URL de l'application.
 *Suivre les tweets liés à un sujet en cliquant sur le sujet.
 
 ## Backend
+
+[![Build](https://github.com/gabi49/4A_SQR_Gabriel_Romeo_Cloud-Computing/actions/workflows/build.yml/badge.svg)](https://github.com/gabi49/4A_SQR_Gabriel_Romeo_Cloud-Computing/actions/workflows/build.yml)
+
 Accéder aux différentes routes du backend à partir de l'URL du backend.
 
 *La route GET / permet de récupérer tous les tweets.
