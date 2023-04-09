@@ -61,7 +61,8 @@ def get_user_tweets(username):
     for key in user_tweet_keys:
         tweet = json.loads(str(tweets_db.get(key)))
         user_tweets.append(tweet)
-    # return user_tweet_keys
+# Pour obtenir les timestamp des tweets liés à cet utilisateur:
+    # return user_tweet_keys 
     return jsonify(user_tweets)
 # curl -X GET http://localhost:5000/tweets/Gabriel
 
